@@ -1,9 +1,9 @@
-# \[Group name\]
+# \[Anna, Vithusha og Barbara\]
 
 **Group members:**
-- A
-- B
-- C
+- Anna Nielsen
+- Vithusha Viknes
+- Barbara Bille Tagmose
 
 This repository contains  
 1. Inaugural project. 
