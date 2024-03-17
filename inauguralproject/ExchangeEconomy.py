@@ -1,4 +1,5 @@
 from types import SimpleNamespace
+import numpy as np
 
 class ExchangeEconomyClass:
 
@@ -35,8 +36,8 @@ class ExchangeEconomyClass:
     def demand_B(self,p1):
         par = self.par
 
-        x1B = par.beta*(p1*par.w1B + par.w2B)/p1
-        x2B = (1-par.beta)*(p1*par.w1B + par.w2B)
+        x1B = par.beta*(p1*(1-par.w1A) + (1-par.w2A))/p1
+        x2B = (1-par.beta)*(p1*(1-par.w1A) + (1-par.w2A))
 
         return x1B, x2B
 
@@ -51,3 +52,30 @@ class ExchangeEconomyClass:
         eps2 = x2A-par.w2A + x2B-(1-par.w2A)
 
         return eps1,eps2
+    
+    def solve_discrete(self):
+
+        par = self.par
+
+        x1A = np.linspace(0, 1, 75)
+        x2A = np.linspace(0, 1, 75)
+
+        x1a_vec =[]
+        x2a_vec =[]
+
+        for x1a in x1A:
+            for x2a in x2A:
+
+                x1b = 1 - x1a
+                x2b = 1 - x2a
+
+                if self.utility_A(x1a, x2a) >= self.utility_A(par.w1A, par.w2A) and self.utility_B(x1b, x2b) >= self.utility_B(1-par.w1A, 1-par.w2A):
+                    x1a_vec.append(x1a)
+                    x2a_vec.append(x2a)
+
+        return x1a_vec, x2a_vec
+
+                    
+
+
+
