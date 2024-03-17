@@ -1,4 +1,4 @@
-# \[Anna, Vithusha og Barbara\]
+# \Anna, Vithusha og Barbara\
 
 **Group members:**
 - Anna Nielsen
