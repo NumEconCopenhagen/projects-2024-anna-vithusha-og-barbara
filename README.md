@@ -9,3 +9,5 @@ This repository contains
 1. Inaugural project. 
 2. Data project. Anna will do this now
 3. Model project. We model ...
+
+Vis dette på github
