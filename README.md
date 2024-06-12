@@ -7,7 +7,7 @@
 
 This repository contains  
 1. Inaugural project. 
-2. Data project. Anna 
+2. Data project. We investigate gendered differences in math-abilities using data from Timms (2019).
 3. Model project. We model ...
 
 Vis dette på github
